@@ -54,4 +54,27 @@ public class Database {
     
         return allHighscores;
     }
+   public void saveUser(Highscore x) throws SQLException, Exception 
+    {
+        Connection conn = null;
+        Class.forName("org.sqlite.JDBC");
+        
+        //Skab forbindelse til databasen...
+        try {          
+          conn = DriverManager.getConnection(connectionString);
+        } 
+        catch ( SQLException e ) {
+          //Skrive fejlhåndtering her
+        }
+        
+        String sql = "INSERT INTO Highscore(User, Score) VALUES('" + x.user + "', '" + x.score + "')";
+ 
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            //pstmt.setString(1, name);
+            //pstmt.setDouble(2, capacity);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }        
+    }
 }

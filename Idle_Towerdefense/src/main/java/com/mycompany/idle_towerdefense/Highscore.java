@@ -11,10 +11,10 @@ package com.mycompany.idle_towerdefense;
  */
 public class Highscore {
     String user;
-    int Score;
+    int score;
 
     public Highscore(String U,int S) {
         user = U;
-        Score = S;
+        score = S;
     }
 }
