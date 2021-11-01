@@ -5,11 +5,15 @@
  */
 package com.mycompany.idle_towerdefense;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author danie
  */
 public class Highscore {
+    ArrayList<Highscore> highscores = new ArrayList<>();
+    Database db = new Database();
     String user;
     int score;
 
@@ -17,4 +21,5 @@ public class Highscore {
         user = U;
         score = S;
     }
+    
 }
