@@ -5,15 +5,19 @@
  */
 package com.mycompany.idle_towerdefense;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author danie
  */
-public class Highscore {
-    ArrayList<Highscore> highscores = new ArrayList<>();
+public class Highscore{
     Database db = new Database();
+    Sorting Sorter = new Sorting();
+    public ArrayList<Highscore> highscores = new ArrayList();
     String user;
     int score;
 
@@ -22,4 +26,14 @@ public class Highscore {
         score = S;
     }
     
+    public void sortHighscores(){
+        highscores = Sorter.sort(highscores);
+    }
+    public void getHighscores(){
+        try {
+            highscores = db.getAllHighscores();
+        } catch (Exception ex) {
+            Logger.getLogger(Highscore.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
