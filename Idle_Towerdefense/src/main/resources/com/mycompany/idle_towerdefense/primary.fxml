@@ -1,16 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.idle_towerdefense.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #060B10;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.idle_towerdefense.PrimaryController">
    <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+      <Label layoutX="74.0" layoutY="146.0" text="THE TOWER" textFill="#ecf8ff">
+         <font>
+            <Font name="Magneto Bold" size="90.0" />
+         </font>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" spread="0.32" width="30.0">
+               <color>
+                  <Color red="0.009999999776482582" green="1.0" blue="0.9485343098640442" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="670.0" layoutY="466.0" stroke="#ffae00" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 10;" width="200.0">
+         <effect>
+            <DropShadow height="101.93" radius="50.9275" spread="0.81" width="103.78">
+               <color>
+                  <Color red="1.0" green="0.6389891505241394" opacity="0.949999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="336.0" layoutY="541.0" stroke="#00d8ff" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 70;" width="200.0">
+         <effect>
+            <DropShadow height="102.86" radius="51.16" spread="0.81" width="103.78">
+               <color>
+                  <Color green="0.8375450968742371" blue="1.0" opacity="0.949999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="-26.0" layoutY="466.0" stroke="#23ff00" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 10;" width="200.0">
+         <effect>
+            <DropShadow height="101.93" radius="50.9275" spread="0.81" width="103.78">
+               <color>
+                  <Color red="0.3971119225025177" green="1.0" opacity="0.949999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="323.0" layoutY="-116.0" stroke="#23ff00" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 40;" width="200.0">
+         <effect>
+            <DropShadow height="101.93" radius="50.9275" spread="0.81" width="103.78">
+               <color>
+                  <Color red="0.3971119225025177" green="1.0" opacity="0.949999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="636.0" layoutY="-116.0" stroke="#00d0ff" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: -20;" width="200.0">
+         <effect>
+            <DropShadow height="102.86" radius="51.16" spread="0.81" width="103.78">
+               <color>
+                  <Color green="0.9025270938873291" blue="1.0" opacity="0.949999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="-100.0" layoutY="-56.0" stroke="#ffa000" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 40;" width="200.0">
+         <effect>
+            <DropShadow height="103.32" radius="51.275" spread="0.81" width="103.78">
+               <color>
+                  <Color red="1.0" green="0.6823104619979858" opacity="0.949999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Circle fill="DODGERBLUE" layoutX="692.0" layoutY="323.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="0.9513888955116272" green="1.0" blue="0.02777777798473835" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="235.0" layoutY="97.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="0.029999999329447746" green="1.0" blue="0.6638267040252686" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="242.0" layoutY="437.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.5867869853973389" blue="0.029999999329447746" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="579.0" layoutY="125.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.670305073261261" blue="0.029999999329447746" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="564.0" layoutY="437.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="0.029999999329447746" green="1.0" blue="0.8696161508560181" opacity="0.9100000262260437" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="59.0" layoutY="323.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.9486161470413208" opacity="0.9100000262260437" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Button layoutX="327.0" layoutY="302.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="72.0" prefWidth="192.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text=" " textFill="#e8e8e8">
+         <effect>
+            <DropShadow height="68.47" radius="33.7275" spread="0.68" width="68.44">
+               <color>
+                  <Color red="0.5540014505386353" green="0.8600000143051147" blue="0.3783999979496002" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Ebrima" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="395.0" layoutY="323.0" onMouseClicked="#switchToSecondary" text="BEGIN" textFill="WHITE">
+         <font>
+            <Font name="Ebrima" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.23">
+               <color>
+                  <Color red="1.0" green="0.9747292399406433" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
    </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-</VBox>
+</AnchorPane>
