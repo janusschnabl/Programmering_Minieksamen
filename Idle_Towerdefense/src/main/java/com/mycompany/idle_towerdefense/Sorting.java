@@ -18,7 +18,7 @@ public class Sorting {
         next.add(prev.get(0));
         for(int i = 1; i<prev.size();i++){
             int m = 0;
-            while(prev.get(i).score > next.get(m).score){
+            while(prev.get(i).score > next.get(m).score && m<next.size()){
                 m++;
             }
             next.add(m,prev.get(i));
