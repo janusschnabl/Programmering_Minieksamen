@@ -11,18 +11,18 @@ import java.util.Vector;
  *
  * @author danie
  */
-public class Player {
-    Vector<Float> position;
+public class Projectile {
+    Vector<Double> position;// = new Vector<float>();
+    Vector<Double> velocity;
     float size;
-    float HP;
-    
-    Player(Vector<Float> p,float s, float hp){
+    float damage;
+
+    public Projectile(Vector<Double> p, Vector<Double> v) {
         position = p;
-        size = s;
-        HP = hp;
+        velocity = v;
+        size = 10;
+        damage = 10;
     }
     
-    void shoot(){
-        
-    }
+    
 }
