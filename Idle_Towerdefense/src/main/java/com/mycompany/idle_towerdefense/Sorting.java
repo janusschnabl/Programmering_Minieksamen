@@ -15,10 +15,14 @@ public class Sorting {
     ArrayList sort(ArrayList<Highscore> prev){
         prev = new ArrayList();
         ArrayList<Highscore> next = new ArrayList();
-        next.add(prev(0));
+        next.add(prev.get(0));
         for(int i = 1; i<prev.size();i++){
-            if(prev(i).score>)
+            int m = 0;
+            while(prev.get(i).score > next.get(m).score){
+                m++;
+            }
+            next.add(m,prev.get(i));
         }
-        return prev;
+        return next;
     }
 }
