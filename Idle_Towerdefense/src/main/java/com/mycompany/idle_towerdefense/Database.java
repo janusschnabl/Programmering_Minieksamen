@@ -54,7 +54,7 @@ public class Database {
     
         return allHighscores;
     }
-   public void saveUser(Highscore x) throws SQLException, Exception 
+   public void saveHighscore(Highscore x) throws SQLException, Exception 
     {
         Connection conn = null;
         Class.forName("org.sqlite.JDBC");
