@@ -22,7 +22,6 @@ public class Projectile {
         velocity = v;
         size = 10;
         damage = 10;
-        //abc
     }
     
     
