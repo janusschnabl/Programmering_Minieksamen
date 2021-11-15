@@ -15,9 +15,16 @@ import java.util.Vector;
 public class App extends Application {
 
     private static Scene scene;
+    boolean start = false;
 
     @Override
     public void start(Stage stage) throws IOException {
+        AlwaysRun ar = new AlwaysRun();
+        ar._update = false;
+        ar.start();
+        
+        ThreadHolder.INSTANCE.ar = ar;
+        
         scene = new Scene(loadFXML("primary"), 800, 600);
         stage.setScene(scene);
         stage.show();

@@ -9,6 +9,6 @@ public boolean start = false;
     @FXML
     private void switchToSecondary() throws IOException {
         App.setRoot("secondary");
-        start = true;
+            start = true;
     }
 }
