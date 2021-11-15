@@ -26,6 +26,11 @@
             <version>3.3.7</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>org.jscience</groupId>
+            <artifactId>jscience</artifactId>
+            <version>5.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

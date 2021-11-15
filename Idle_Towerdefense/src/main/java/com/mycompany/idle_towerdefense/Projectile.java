@@ -7,23 +7,26 @@ package com.mycompany.idle_towerdefense;
 
 import java.util.Vector;
 
+
 /**
  *
  * @author danie
  */
 public class Projectile {
-    Vector<Double> position;// = new Vector<float>();
-    Vector<Double> velocity;
+    PVector position = new PVector();
+    PVector velocity = new PVector();
     float size;
     float damage;
 
-    public Projectile(Vector<Double> p, Vector<Double> v) {
+    public Projectile(PVector p, PVector v) {
         position = p;
         velocity = v;
         size = 10;
         damage = 10;
     }
     
-    void 
+    void updatePosition(){
+        position.add(velocity);
+    }
     
 }
