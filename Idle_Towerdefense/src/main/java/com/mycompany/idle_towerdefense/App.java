@@ -21,7 +21,7 @@ public class App extends Application {
         scene = new Scene(loadFXML("primary"), 800, 600);
         stage.setScene(scene);
         stage.show();
-        Player player = new Player(new Vector<Float>(10,10),5,50);
+        Player player = new Player(new PVector(10,10),5,50);
     }
 
     static void setRoot(String fxml) throws IOException {

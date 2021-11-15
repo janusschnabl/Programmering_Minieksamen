@@ -12,11 +12,11 @@ import java.util.Vector;
  * @author danie
  */
 public class Player {
-    Vector<Float> position;
+    PVector position= new PVector();
     float size;
     float HP;
     
-    Player(Vector<Float> p,float s, float hp){
+    Player(PVector p,float s, float hp){
         position = p;
         size = s;
         HP = hp;
