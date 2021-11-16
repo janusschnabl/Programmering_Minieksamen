@@ -46,7 +46,7 @@ public class SecondaryController implements Initializable {
     public void update(){ 
         gc.clearRect(0, 0, 10000, 10000);
         gc.setFill(Color.WHITE);
-        gc.fillOval(ThreadHolder.INSTANCE.ar.b.x,ThreadHolder.INSTANCE.ar.b.y,50,50);
+        gc.fillOval(ThreadHolder.INSTANCE.ar.b.position.x,ThreadHolder.INSTANCE.ar.b.position.y,50,50);
         System.out.println("SUCCES");
     }
     
