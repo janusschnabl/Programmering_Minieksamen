@@ -49,13 +49,18 @@ public class SortingIT {
     @Test
     public void testSort() {
         System.out.println("sort");
-        ArrayList<Highscore> prev = null;
+        ArrayList<Highscore> prev = new ArrayList();
+        for(int i = 0; i<10; i++){
+        prev.add(new Highscore("banan", (int) Math.round(100*Math.random())));
+        }
         Sorting instance = new Sorting();
-        ArrayList expResult = null;
-        ArrayList result = instance.sort(prev);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<Highscore> result = instance.sort(prev);
+        for(int i = 0; i<9; i++){
+            if(result.get(i).score<result.get(i+1).score){
+                assertEquals(true, true);
+            }
+        }
+        assertEquals(false, true);
     }
     
 }
