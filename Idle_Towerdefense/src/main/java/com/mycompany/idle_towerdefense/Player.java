@@ -5,13 +5,16 @@
  */
 package com.mycompany.idle_towerdefense;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 /**
  *
  * @author danie
  */
+
 public class Player {
+    ArrayList<Projectile> projectiles = new ArrayList();
     PVector position= new PVector();
     float size;
     float HP;
@@ -23,6 +26,10 @@ public class Player {
     }
     
     void shoot(){
+        
+    }
+    
+    void hitDetection(){
         
     }
 }

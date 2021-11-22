@@ -6,20 +6,19 @@
 package com.mycompany.idle_towerdefense;
 
 import java.util.ArrayList;
-import java.util.Vector;
-
 
 /**
  *
  * @author danie
  */
-public class Projectile {
+public class Enemy {
+    static ArrayList<Enemy> enemies = new ArrayList();
     PVector position = new PVector();
     PVector velocity = new PVector();
     float size;
     float damage;
 
-    public Projectile(PVector p, PVector v) {
+    public Enemy(PVector p, PVector v) {
         position = p;
         velocity = v;
         size = 10;
@@ -29,5 +28,4 @@ public class Projectile {
     void updatePosition(){
         position.add(velocity);
     }
-    
 }
