@@ -54,4 +54,9 @@ public class PVector {
         return r;
     }
     
+    float dist(PVector n){
+        float d;
+        d = (float) Math.sqrt(Math.pow(x-n.x,2)+Math.pow(y-n.y,2)+Math.pow(z-n.z,2));
+        return d;
+    }
 }

@@ -30,6 +30,8 @@ public class Player {
     }
     
     void hitDetection(){
-        
+        for(int i = 0; i<Enemy.enemies.size(); i++){
+            if(position.dist(Enemy.enemies.get(i).position))
+        }
     }
 }
