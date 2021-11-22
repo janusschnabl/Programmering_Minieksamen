@@ -5,8 +5,6 @@
  */
 package com.mycompany.idle_towerdefense;
 
-import java.security.acl.Acl;
-
 /**
  *
  * @author danie
@@ -40,4 +38,20 @@ public class PVector {
         r.z = n.z+z;
         return r;
     }
+    
+    PVector sub(PVector n){
+        PVector r = new PVector();
+        r.x = -n.x+x;
+        r.y = -n.y+y;
+        r.z = -n.z+z;
+        return r;
+    }
+    PVector mult(float n){
+        PVector r = new PVector();
+        r.x = n*x;
+        r.y = n*y;
+        r.z = n*z;
+        return r;
+    }
+    
 }
