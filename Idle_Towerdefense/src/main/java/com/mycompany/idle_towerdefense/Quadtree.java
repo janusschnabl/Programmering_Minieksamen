@@ -10,5 +10,13 @@ package com.mycompany.idle_towerdefense;
  * @author danie
  */
 public class Quadtree {
+    PVector location;
+    PVector bounds;
+    float h;
+    float b;
     
+    Quadtree(PVector l, PVector b){
+        location = l;
+        bounds = b;
+    }
 }
