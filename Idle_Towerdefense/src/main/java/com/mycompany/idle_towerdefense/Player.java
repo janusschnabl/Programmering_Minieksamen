@@ -31,7 +31,9 @@ public class Player {
     
     void hitDetection(){
         for(int i = 0; i<Enemy.enemies.size(); i++){
-            if(position.dist(Enemy.enemies.get(i).position))
+            if(position.dist(Enemy.enemies.get(i).position)<size+Enemy.enemies.get(i).size){
+                System.out.print("hit");
+            }
         }
     }
 }
