@@ -35,6 +35,7 @@ public class SecondaryController implements Initializable {
 
 
     //A snake body part is 50x50
+    
     private final Double snakeSize = 20.;
     //The head of the snake is created, at position (250,250)
     private Rectangle snakeHead;
