@@ -7,11 +7,8 @@ package com.mycompany.idle_towerdefense;
 
 /**
  *
- * @author janus
+ * @author Janusds
  */
-public final class ThreadHolder {
-    
-    public final static ThreadHolder INSTANCE = new ThreadHolder();
-   
-    public AlwaysRun ar;
+public enum Direction {
+    UP,DOWN,RIGHT,LEFT
 }

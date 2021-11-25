@@ -13,22 +13,16 @@ import java.util.Vector;
  * JavaFX App
  */
 public class App extends Application {
+    
 
     private static Scene scene;
-    boolean start = false;
 
     @Override
     public void start(Stage stage) throws IOException {
-        AlwaysRun ar = new AlwaysRun();
-        ar._update = false;
-        ar.start();
         
-        ThreadHolder.INSTANCE.ar = ar;
-        
-        scene = new Scene(loadFXML("primary"), 800, 600);
+        scene = new Scene(loadFXML("primary"), 600, 600);
         stage.setScene(scene);
         stage.show();
-        Player player = new Player(new PVector(10,10),5,50);
     }
 
     static void setRoot(String fxml) throws IOException {
