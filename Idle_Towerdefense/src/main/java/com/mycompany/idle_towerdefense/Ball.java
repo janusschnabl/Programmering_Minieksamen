@@ -10,14 +10,16 @@ package com.mycompany.idle_towerdefense;
  * @author janus
  */
 public class Ball {
+
     x = 50;
     y = 50;
-    
+    PVector position = new PVector(50,50);
+
     //PVector pos = new PVector(x,y);
      
     void update(){
-        x++;
-        System.out.println(x);
+        position.x++;
+        System.out.println(position.x);
     }
     
 // public Ball(int _x, int _y) {
@@ -26,11 +28,14 @@ public class Ball {
     //}
 
     public int getX() {
-        return x;
+        return (int) position.x;
     }
 
    /* public void setX(int _x) {
         this.x =_x;
     }*/
+    public void setX(int _x) {
+        this.position.x =_x;
+    }
 }
 
