@@ -7,11 +7,16 @@ package com.mycompany.idle_towerdefense;
 
 /**
  *
- * @author janus
+ * @author danie
  */
-public final class ThreadHolder {
+public class Quadtree {
+    PVector location;
+    PVector bounds;
+    float h;
+    float b;
     
-    public final static ThreadHolder INSTANCE = new ThreadHolder();
-   
-    public AlwaysRun ar;
+    Quadtree(PVector l, PVector b){
+        location = l;
+        bounds = b;
+    }
 }

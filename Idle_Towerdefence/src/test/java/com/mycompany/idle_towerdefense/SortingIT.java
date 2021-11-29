@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.mycompany.idle_towerdefense;
-
+/*
 import java.util.ArrayList;
 import java.util.Random;
 import org.junit.jupiter.api.AfterEach;
@@ -13,12 +13,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+*/
 /**
  *
  * @author danie
  */
-public class SortingIT {
+/*public class SortingIT {
     
     public SortingIT() {
     }
@@ -46,7 +46,7 @@ public class SortingIT {
     /**
      * Test of sort method, of class Sorting.
      */
-    @Test
+    /*@Test
     public void testSort() {
         System.out.println("sort");
         ArrayList<Highscore> prev = new ArrayList();
@@ -64,3 +64,4 @@ public class SortingIT {
     }
     
 }
+*/
