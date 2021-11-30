@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author danie
  */
 public class Sorting {
-    ArrayList sort(ArrayList<Highscore> prev){
+    public static ArrayList sort(ArrayList<Highscore> prev){
         prev = new ArrayList();
         ArrayList<Highscore> next = new ArrayList();
         next.add(prev.get(0));
