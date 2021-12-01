@@ -5,6 +5,7 @@
  */
 package com.mycompany.idle_towerdefense;
 
+import java.io.IOException;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -24,6 +25,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * FXML Controller class
@@ -110,8 +113,12 @@ public class SecondaryController implements Initializable {
             //System.out.println((xPos + snakeHead.getX()) + "-----" + (yPos + snakeHead.getY()));
             eatFood();
             gameTicks++;
-            if(checkIfGameIsOver(snakeHead)){
-                timeline.stop();
+            try {
+                if(checkIfGameIsOver(snakeHead)){
+                    timeline.stop();
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(SecondaryController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }));
         food = new Food(-20,-20,anchorPane,snakeSize);
@@ -185,11 +192,13 @@ public class SecondaryController implements Initializable {
     }
 
     //Tjekker om slangen rammer sig selv eller kommer ud fra kanterne
-    public boolean checkIfGameIsOver(Rectangle snakeHead) {
+    public boolean checkIfGameIsOver(Rectangle snakeHead) throws IOException {
         if (xPos > 290 || xPos < -300 ||yPos < -300 || yPos > 290) {
             System.out.println("Game_over");
+            App.setRoot("death");
             return true;
         } else if(snakeHitItSelf()){
+            App.setRoot("death");
             return true;
         }
         return false;
@@ -240,10 +249,4 @@ public class SecondaryController implements Initializable {
         }
         return false;
     }
-   
-    if(checkIfGameIsOver == true){
-    App.setRoot("secondary");
-}
-    
-    
 }
