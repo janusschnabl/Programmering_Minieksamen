@@ -169,10 +169,10 @@
             </DropShadow>
          </effect>
       </TextField>
-      <TableView layoutX="158.0" layoutY="177.0" prefHeight="149.0" prefWidth="293.0">
+      <TableView fx:id="table" layoutX="158.0" layoutY="177.0" prefHeight="149.0" prefWidth="293.0">
         <columns>
-          <TableColumn prefWidth="147.5" text="Name" />
-          <TableColumn prefWidth="144.5" text="Points" />
+          <TableColumn fx:id="name" prefWidth="147.5" text="Name" />
+          <TableColumn fx:id="points" prefWidth="144.5" text="Points" />
         </columns>
       </TableView>
    </children>
