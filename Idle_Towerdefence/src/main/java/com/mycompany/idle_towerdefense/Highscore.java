@@ -16,7 +16,6 @@ import java.util.logging.Logger;
  */
 public class Highscore{
     Database db = new Database();
-    Sorting Sorter = new Sorting();
     public ArrayList<Highscore> highscores = new ArrayList();
     String user;
     int score;
@@ -27,11 +26,20 @@ public class Highscore{
     }
     
     public void sortHighscores(){
-        highscores = Sorter.sort(highscores);
+        highscores = Sorting.sort(highscores);
     }
     public void getHighscores(){
         try {
             highscores = db.getAllHighscores();
+        } catch (Exception ex) {
+            Logger.getLogger(Highscore.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        sortHighscores();
+    }
+    
+    public void saveHighscore(){
+        try {
+            db.saveHighscore(this);
         } catch (Exception ex) {
             Logger.getLogger(Highscore.class.getName()).log(Level.SEVERE, null, ex);
         }
