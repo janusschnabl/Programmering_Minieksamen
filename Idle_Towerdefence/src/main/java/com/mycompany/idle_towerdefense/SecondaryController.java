@@ -241,4 +241,9 @@ public class SecondaryController implements Initializable {
         return false;
     }
    
+    if(checkIfGameIsOver == true){
+    App.setRoot("secondary");
+}
+    
+    
 }

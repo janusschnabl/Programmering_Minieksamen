@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #060B10;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.idle_towerdefense.PrimaryController">
+   <children>
+      <Circle fill="DODGERBLUE" layoutX="521.0" layoutY="338.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.0313725508749485" blue="0.0313725508749485" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="434.0" layoutY="192.0" radius="15.0" stroke="YELLOW" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.6499999761581421" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="564.0" layoutY="437.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.2823529541492462" blue="0.0313725508749485" opacity="0.9100000262260437" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Button layoutX="224.0" layoutY="394.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="57.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text=" " textFill="#ff470a">
+         <effect>
+            <DropShadow height="68.45" radius="33.7225" spread="0.68" width="68.44">
+               <color>
+                  <Color red="1.0" green="0.2823529541492462" blue="0.0313725508749485" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Ebrima" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="241.0" layoutY="398.0" onMouseClicked="#switchToSecondary" prefHeight="48.0" prefWidth="136.0" text="ADD YOUR NAME" textFill="WHITE">
+         <font>
+            <Font name="Ebrima" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.23">
+               <color>
+                  <Color red="1.0" green="0.27843138575553894" blue="0.03921568766236305" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Circle fill="DODGERBLUE" layoutX="67.0" layoutY="84.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.029999999329447746" blue="0.029999999329447746" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="76.0" layoutY="353.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.2821299433708191" blue="0.029999999329447746" opacity="0.9100000262260437" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="106.0" layoutY="523.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.0313725508749485" blue="0.0313725508749485" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="404.0" layoutY="493.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.5867869853973389" blue="0.029999999329447746" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="323.0" layoutY="69.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
+         <effect>
+            <Shadow height="25.0" radius="12.0" width="25.0">
+               <color>
+                  <Color red="1.0" green="0.2821299433708191" blue="0.029999999329447746" opacity="0.9100000262260437" />
+               </color>
+            </Shadow>
+         </effect>
+      </Circle>
+      <Label layoutX="103.0" layoutY="84.0" prefHeight="72.0" prefWidth="410.0" text="YOU DIED" textAlignment="CENTER" textFill="#fff0ed">
+         <font>
+            <Font name="Magneto Bold" size="65.0" />
+         </font>
+         <effect>
+            <DropShadow height="40.0" radius="19.5" spread="0.32" width="40.0">
+               <color>
+                  <Color red="1.0" green="0.009999999776482582" blue="0.009999999776482582" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="-135.0" layoutY="364.0" stroke="#ffa000" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 40;" width="200.0">
+         <effect>
+            <DropShadow height="103.32" radius="51.275" spread="0.81" width="103.78">
+               <color>
+                  <Color red="1.0" green="0.6823104619979858" opacity="0.949999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="142.0" layoutY="521.0" stroke="#ff4808" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 70;" width="200.0">
+         <effect>
+            <DropShadow height="103.32" radius="51.275" spread="0.81" width="103.78">
+               <color>
+                  <Color red="1.0" green="0.2823529541492462" blue="0.0313725508749485" opacity="0.949999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="449.0" layoutY="521.0" stroke="#ff0808" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 40;" width="200.0">
+         <effect>
+            <DropShadow height="103.55" radius="51.332499999999996" spread="0.81" width="103.78">
+               <color>
+                  <Color red="1.0" green="0.0313725508749485" blue="0.0313725508749485" opacity="0.949999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <TextField layoutX="188.0" layoutY="331.0" prefHeight="41.0" prefWidth="227.0" promptText="YOUR USERNAME" style="-fx-background-color: transparemt; -fx-border-color: #e8e8e8; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: #ff470a;">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <DropShadow height="30.0" radius="14.5" spread="0.71" width="30.0">
+               <color>
+                  <Color red="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TableView layoutX="158.0" layoutY="177.0" prefHeight="149.0" prefWidth="293.0">
+        <columns>
+          <TableColumn prefWidth="147.5" text="Name" />
+          <TableColumn prefWidth="144.5" text="Points" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
