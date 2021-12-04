@@ -122,6 +122,7 @@ public class SecondaryController implements Initializable {
             }
         }));
         food = new Food(-20,-20,anchorPane,snakeSize);
+        deathController.currentScore=0;
     }
 
     //Change position with key pressed
@@ -223,6 +224,7 @@ public class SecondaryController implements Initializable {
             System.out.println("Eat food");
             foodCantSpawnInsideSnake();
             addSnakeTail();
+            deathController.currentScore = deathController.currentScore+1;
         }
     }
 

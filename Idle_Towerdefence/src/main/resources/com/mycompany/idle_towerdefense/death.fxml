@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #060B10;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.idle_towerdefense.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #060B10;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.idle_towerdefense.deathController">
    <children>
       <Circle fill="DODGERBLUE" layoutX="521.0" layoutY="338.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
          <effect>
@@ -43,7 +43,7 @@
             </Shadow>
          </effect>
       </Circle>
-      <Button layoutX="224.0" layoutY="394.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="57.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text=" " textFill="#ff470a">
+      <Button layoutX="224.0" layoutY="394.0" mnemonicParsing="false" onAction="#addName" prefHeight="57.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text=" " textFill="#ff470a">
          <effect>
             <DropShadow height="68.45" radius="33.7225" spread="0.68" width="68.44">
                <color>
@@ -175,5 +175,20 @@
           <TableColumn fx:id="points" prefWidth="144.5" text="Points" />
         </columns>
       </TableView>
+      <Button layoutX="222.0" layoutY="464.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="57.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text="Try again" textFill="#ff470a">
+         <effect>
+            <DropShadow height="68.45" radius="33.7225" spread="0.68" width="68.44">
+               <color>
+                  <Color red="1.0" green="0.2823529541492462" blue="0.0313725508749485" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Ebrima" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>
