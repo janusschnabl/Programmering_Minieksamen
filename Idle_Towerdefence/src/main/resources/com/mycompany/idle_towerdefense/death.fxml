@@ -157,7 +157,7 @@
             </DropShadow>
          </effect>
       </Rectangle>
-      <TextField layoutX="188.0" layoutY="331.0" prefHeight="41.0" prefWidth="227.0" promptText="YOUR USERNAME" style="-fx-background-color: transparemt; -fx-border-color: #e8e8e8; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: #ff470a;">
+      <TextField fx:id="User" layoutX="188.0" layoutY="331.0" prefHeight="41.0" prefWidth="227.0" promptText="YOUR USERNAME" style="-fx-background-color: transparemt; -fx-border-color: #e8e8e8; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: #ff470a;">
          <font>
             <Font size="16.0" />
          </font>
