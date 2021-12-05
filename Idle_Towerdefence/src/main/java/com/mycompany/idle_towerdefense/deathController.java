@@ -24,7 +24,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 public class deathController implements Initializable{
     
-    static int currentScore;
+    static int currentScore=0;
     
     @FXML
     TableView table;
@@ -39,12 +39,13 @@ public class deathController implements Initializable{
             new TableData("2", "test 2")
         );
         
-        points.setText("hello");
+        //points.setText("hello");
         
-        name.setCellValueFactory(new PropertyValueFactory<TableData, String>("column 1"));
-        points.setCellValueFactory(new PropertyValueFactory<TableData, String>("column 2"));
+        //name.setCellValueFactory(new PropertyValueFactory<TableData, String>("column 1"));
+        //points.setCellValueFactory(new PropertyValueFactory<TableData, String>("column 2"));
         
-        table.setItems(allData);
+        //table.setItems(allData);
+        //fill();
         
      }
     
@@ -58,7 +59,9 @@ public class deathController implements Initializable{
     }
     
     @FXML
-    public void addName(){
+    public void addName() throws Exception{
+        Database db = new Database();
+        db.saveHighscore(new Highscore(User.getText(),currentScore));
         Highscore.highscores.add(new Highscore(User.getText(),currentScore));
         currentScore=0;
         
