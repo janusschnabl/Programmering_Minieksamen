@@ -103,7 +103,7 @@
             </Shadow>
          </effect>
       </Circle>
-      <Label layoutX="103.0" layoutY="84.0" prefHeight="72.0" prefWidth="410.0" text="YOU DIED" textAlignment="CENTER" textFill="#fff0ed">
+      <Label layoutX="103.0" layoutY="29.0" prefHeight="72.0" prefWidth="410.0" text="YOU DIED" textAlignment="CENTER" textFill="#fff0ed">
          <font>
             <Font name="Magneto Bold" size="65.0" />
          </font>
@@ -175,5 +175,17 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Label fx:id="EndScore" layoutX="300.0" layoutY="119.0" text="0" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <effect>
+            <DropShadow height="56.58" radius="27.7925" spread="0.48" width="56.59">
+               <color>
+                  <Color red="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
    </children>
 </AnchorPane>

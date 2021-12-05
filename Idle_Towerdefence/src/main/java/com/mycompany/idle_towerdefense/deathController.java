@@ -13,6 +13,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -34,6 +35,8 @@ public class deathController implements Initializable{
     TableColumn points;
     @FXML
     TextField User;
+    @FXML
+    Label EndScore;
     
     
     public void initialize(URL url, ResourceBundle rb){
@@ -41,10 +44,12 @@ public class deathController implements Initializable{
             new TableData("Bot", "1000000"),
             new TableData("Tryhard", "2")
         );
-       // points.setText("hello");
+        points.setText("hello");
         
         name.setCellValueFactory(new PropertyValueFactory<TableData, String>("column1"));
         points.setCellValueFactory(new PropertyValueFactory<TableData, String>("column2"));
+        
+        EndScore.setText(String.valueOf(currentScore));
                 
      }
     
@@ -68,7 +73,6 @@ public class deathController implements Initializable{
     
     @FXML
     public void switchToSecondary() throws IOException {
-        //App.setRoot("secondary");
-        System.out.println("forkert");
+        App.setRoot("secondary");
     }
 }
