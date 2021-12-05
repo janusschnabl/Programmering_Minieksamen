@@ -9,6 +9,8 @@ package com.mycompany.idle_towerdefense;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -32,7 +34,18 @@ public class deathController implements Initializable{
     
     
     public void initialize(URL url, ResourceBundle rb){
-        ObservableList<TableData> allData = FXCollections.observableArrayList
+        ObservableList<TabelData> allData = FXCollections.observableArrayList(
+            new TabelData("1", "test 1"),
+            new TabelData("2", "test 2")
+        );
+        
+        points.setText("hello");
+        
+        name.setCellValueFactory(new PropertyValueFactory<TabelData, String>("column 1"));
+        points.setCellValueFactory(new PropertyValueFactory<TabelData, String>("column 2"));
+        
+        table.setItems(allData);
+        
      }
     
     public void fill(){
