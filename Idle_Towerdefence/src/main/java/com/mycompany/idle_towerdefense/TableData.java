@@ -11,11 +11,11 @@ import javafx.beans.property.SimpleStringProperty;
  *
  * @author clara
  */
-public class TabelData {
+public class TableData {
     private SimpleStringProperty column1;
     private SimpleStringProperty column2; 
 
-   public TableData(String column1, SimpleStringProperty column2) {
+   public TableData(String column1, String column2) {
         this.column1 = new SimpleStringProperty(column1);
         this.column2 = new SimpleStringProperty(column2);
     }
