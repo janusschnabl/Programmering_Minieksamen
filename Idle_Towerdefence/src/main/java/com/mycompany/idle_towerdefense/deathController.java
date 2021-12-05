@@ -60,8 +60,8 @@ public class deathController implements Initializable{
     @FXML
     public void addName() throws Exception{
         Database db = new Database();
-        db.saveHighscore(new Highscore(User.getText(),currentScore));
         Highscore.highscores.add(new Highscore(User.getText(),currentScore));
+        db.saveHighscore(Highscore.highscores.get(Highscore.highscores.size()-1));
         currentScore=0;
         
     }
