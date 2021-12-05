@@ -28,21 +28,24 @@ public class deathController implements Initializable{
     
     @FXML
     TableView table;
+    @FXML
     TableColumn name;
+    @FXML 
     TableColumn points;
+    @FXML
     TextField User;
     
     
     public void initialize(URL url, ResourceBundle rb){
         ObservableList<TableData> allData = FXCollections.observableArrayList(
-            new TableData("1", "test 1"),
-            new TableData("2", "test 2")
+            new TableData("Bot", "1000000"),
+            new TableData("Tryhard", "2")
         );
         
-        points.setText("hello");
+       // points.setText("hello");
         
-        name.setCellValueFactory(new PropertyValueFactory<TableData, String>("column 1"));
-        points.setCellValueFactory(new PropertyValueFactory<TableData, String>("column 2"));
+        name.setCellValueFactory(new PropertyValueFactory<TableData, String>("column1"));
+        points.setCellValueFactory(new PropertyValueFactory<TableData, String>("column2"));
         
         table.setItems(allData);
         
@@ -66,6 +69,7 @@ public class deathController implements Initializable{
     
     @FXML
     public void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
+        //App.setRoot("secondary");
+        System.out.println("forkert");
     }
 }

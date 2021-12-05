@@ -43,7 +43,7 @@
             </Shadow>
          </effect>
       </Circle>
-      <Button layoutX="224.0" layoutY="394.0" mnemonicParsing="false" onAction="#addName" prefHeight="57.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text=" " textFill="#ff470a">
+      <Button layoutX="126.0" layoutY="394.0" mnemonicParsing="false" onAction="#addName" prefHeight="57.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text="SAVE SCORE" textFill="WHITE">
          <effect>
             <DropShadow height="68.45" radius="33.7225" spread="0.68" width="68.44">
                <color>
@@ -52,27 +52,12 @@
             </DropShadow>
          </effect>
          <font>
-            <Font name="Ebrima" size="24.0" />
+            <Font name="Ebrima" size="22.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="241.0" layoutY="398.0" onMouseClicked="#switchToSecondary" prefHeight="48.0" prefWidth="136.0" text="ADD YOUR NAME" textFill="WHITE">
-         <font>
-            <Font name="Ebrima" size="16.0" />
-         </font>
-         <effect>
-            <DropShadow spread="0.23">
-               <color>
-                  <Color red="1.0" green="0.27843138575553894" blue="0.03921568766236305" />
-               </color>
-            </DropShadow>
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
       <Circle fill="DODGERBLUE" layoutX="67.0" layoutY="84.0" radius="15.0" stroke="#fbff00" strokeType="INSIDE" strokeWidth="8.0" style="-fx-fill: transparent;">
          <effect>
             <Shadow height="25.0" radius="12.0" width="25.0">
@@ -139,7 +124,7 @@
             </DropShadow>
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="142.0" layoutY="521.0" stroke="#ff4808" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 70;" width="200.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="134.0" layoutY="578.0" stroke="#ff4808" strokeType="INSIDE" strokeWidth="5.0" style="-fx-fill: transparent; -fx-rotate: 70;" width="200.0">
          <effect>
             <DropShadow height="103.32" radius="51.275" spread="0.81" width="103.78">
                <color>
@@ -157,7 +142,7 @@
             </DropShadow>
          </effect>
       </Rectangle>
-      <TextField fx:id="User" layoutX="188.0" layoutY="331.0" prefHeight="41.0" prefWidth="227.0" promptText="YOUR USERNAME" style="-fx-background-color: transparemt; -fx-border-color: #e8e8e8; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: #ff470a;">
+      <TextField fx:id="User" layoutX="188.0" layoutY="331.0" prefHeight="41.0" prefWidth="227.0" promptText="YOUR USERNAME" style="-fx-background-color: transparemt; -fx-border-color: #e8e8e8; -fx-border-width: 0px 0px 1px 0px;">
          <font>
             <Font size="16.0" />
          </font>
@@ -175,7 +160,7 @@
           <TableColumn fx:id="points" prefWidth="144.5" text="Points" />
         </columns>
       </TableView>
-      <Button layoutX="222.0" layoutY="464.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="57.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text="Try again" textFill="#ff470a">
+      <Button layoutX="324.0" layoutY="395.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="57.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text="Try again" textFill="WHITE">
          <effect>
             <DropShadow height="68.45" radius="33.7225" spread="0.68" width="68.44">
                <color>

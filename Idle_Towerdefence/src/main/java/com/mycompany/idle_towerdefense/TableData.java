@@ -6,13 +6,16 @@
 package com.mycompany.idle_towerdefense;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.fxml.FXML;
 
 /**
  *
  * @author clara
  */
 public class TableData {
+    @FXML
     private SimpleStringProperty column1;
+    @FXML
     private SimpleStringProperty column2; 
 
    public TableData(String column1, String column2) {
