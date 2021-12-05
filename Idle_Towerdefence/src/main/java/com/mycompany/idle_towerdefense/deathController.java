@@ -9,6 +9,8 @@ package com.mycompany.idle_towerdefense;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -27,6 +29,8 @@ public class deathController implements Initializable{
     
     static int currentScore=0;
     
+    ObservableList<Highscore> allHighscore = FXCollections.observableArrayList();
+   
     @FXML
     TableView table;
     @FXML
@@ -40,14 +44,18 @@ public class deathController implements Initializable{
     
     
     public void initialize(URL url, ResourceBundle rb){
-        ObservableList<TableData> allData = FXCollections.observableArrayList(
-            new TableData("Bot", "1000000"),
-            new TableData("Tryhard", "2")
-        );
-        points.setText("hello");
+        Database db = new Database();
+        try {
+            allHighscore.addAll(db.getAllHighscores());
+        } catch (Exception ex) {
+            Logger.getLogger(deathController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //points.setText("hello");
         
-        name.setCellValueFactory(new PropertyValueFactory<TableData, String>("column1"));
-        points.setCellValueFactory(new PropertyValueFactory<TableData, String>("column2"));
+        name.setCellValueFactory(new PropertyValueFactory<Highscore, String>("user"));
+        points.setCellValueFactory(new PropertyValueFactory<Highscore, Integer>("score"));
+        
+        table.setItems(allHighscore);
         
         EndScore.setText(String.valueOf(currentScore));
                 
@@ -69,6 +77,9 @@ public class deathController implements Initializable{
         db.saveHighscore(Highscore.highscores.get(Highscore.highscores.size()-1));
         currentScore=0;
         
+        table.getItems().clear();
+        allHighscore.addAll(db.getAllHighscores());
+        table.setItems(allHighscore);
     }
     
     @FXML

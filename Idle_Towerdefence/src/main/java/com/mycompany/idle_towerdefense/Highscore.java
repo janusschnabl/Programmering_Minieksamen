@@ -24,7 +24,15 @@ public class Highscore{
         user = U;
         score = S;
     }
-    
+
+    public int getScore() {
+        return score;
+    }
+
+    public String getUser() {
+        return user;
+    }
+        
     static public void sortHighscores(){
         highscores = Sorting.sort(highscores);
     }
