@@ -27,9 +27,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.scene.control.Label;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
@@ -38,23 +35,17 @@ import javafx.scene.layout.VBox;
  */
 
 public class SecondaryController implements Initializable {
-
-
-    //A snake body part is 50x50
     
     private final Double snakeSize = 20.;
-    //The head of the snake is created, at position (250,250)
-    private Rectangle snakeHead;
-    //First snake tail created behind the head of the snake
-    private Rectangle snakeTail_1;
-    //x and y position of the snake head different from starting position
+    private Rectangle snakeHead; //slangens hoved
+    private Rectangle snakeTail_1; //første del af halen
     double xPos;
     double yPos;
 
     //Mad
     Food food;
 
-    //Direction snake is moving at start
+    //Slangens retning
     private Direction direction;
 
     //Liste over alle slangehovedets positioner
@@ -70,8 +61,6 @@ public class SecondaryController implements Initializable {
     private AnchorPane anchorPane;
     @FXML
     private Button startButton;
-    @FXML
-    private VBox vbox;
 
     Timeline timeline;
 
@@ -79,8 +68,8 @@ public class SecondaryController implements Initializable {
 
     @FXML
     void start() {
-        startButton.setVisible(false);
         
+
         for (Rectangle snake : snakeBody) {
             anchorPane.getChildren().remove(snake);
         }
@@ -105,7 +94,8 @@ public class SecondaryController implements Initializable {
         snakeBody.add(snakeTail_1);
 
         anchorPane.getChildren().addAll(snakeHead, snakeTail_1);
-        
+        startButton.setLayoutX(-300);
+        startButton.setLayoutY(-300);
     }
 
     @Override
@@ -117,7 +107,6 @@ public class SecondaryController implements Initializable {
                 moveSnakeTail(snakeBody.get(i), i);
             }
             canChangeDirection = true;
-            //System.out.println((xPos + snakeHead.getX()) + "-----" + (yPos + snakeHead.getY()));
             eatFood();
             gameTicks++;
             try {
@@ -130,9 +119,10 @@ public class SecondaryController implements Initializable {
         }));
         food = new Food(-20,-20,anchorPane,snakeSize);
         deathController.currentScore=0;
+        
     }
 
-    //Change position with key pressed
+    //skifter retningen når der trykkes på en tast
     @FXML
     void moveSquareKeyPressed(KeyEvent event) {
         if(canChangeDirection){
@@ -149,13 +139,13 @@ public class SecondaryController implements Initializable {
         }
     }
 
-    //Create another snake body part
+    //laver en ny del af kroppen
     @FXML
     void addBodyPart(ActionEvent event) {
         addSnakeTail();
     }
 
-    //Snake head is moved in the direction specified
+    //for hovedet til at bevæge sig
     private void moveSnakeHead(Rectangle snakeHead) {
         switch (direction) {
             case RIGHT:
@@ -179,7 +169,7 @@ public class SecondaryController implements Initializable {
         }
     }
 
-    //A specific tail is moved to the position of the head x game ticks after the head was there
+    //rykker halen sammen med slangens hoved
     private void moveSnakeTail(Rectangle snakeTail, int tailNumber) {
         double yPos = positions.get(gameTicks - tailNumber + 1).getYPos() - snakeTail.getY();
         double xPos = positions.get(gameTicks - tailNumber + 1).getXPos() - snakeTail.getX();
@@ -187,7 +177,7 @@ public class SecondaryController implements Initializable {
         snakeTail.setTranslateY(yPos);
     }
 
-    //New snake tail is created and added to the snake and the anchor pane
+    //ny del af slangens hale tilføjes til anchorpane
     private void addSnakeTail() {
         Rectangle rectangle = snakeBody.get(snakeBody.size() - 1);
         Rectangle snakeTail = new Rectangle(

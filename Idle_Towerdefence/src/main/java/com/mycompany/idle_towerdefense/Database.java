@@ -13,7 +13,7 @@ import java.sql.*;
  * @author danie
  */
 public class Database {
-    private final String connectionString = "jdbc:sqlite:src/Database.db";
+    private final String connectionString = "jdbc:sqlite:src/mydatabase.db";
    
    public ArrayList<Highscore> getAllHighscores() throws SQLException, Exception {
         
@@ -37,7 +37,7 @@ public class Database {
             Statement stat = conn.createStatement();   
 
             //Læser fra database alt data fra databasetabellen people.   
-            ResultSet rs = stat.executeQuery("User, Score");
+            ResultSet rs = stat.executeQuery("select User, Score from Highscore");
 
             //Løber data igennem via en løkke og skriver det up.    
             while (rs.next()) {
