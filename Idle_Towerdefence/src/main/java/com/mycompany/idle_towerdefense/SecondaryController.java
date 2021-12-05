@@ -69,7 +69,6 @@ public class SecondaryController implements Initializable {
     @FXML
     void start() {
         
-
         for (Rectangle snake : snakeBody) {
             anchorPane.getChildren().remove(snake);
         }
