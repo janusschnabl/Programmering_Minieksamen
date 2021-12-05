@@ -49,7 +49,7 @@ public class deathController implements Initializable{
         Database db = new Database();
         Sorting sorter = new Sorting();
         try {
-            allHighscore.addAll(/*sorter.sort(*/db.getAllHighscores())/*)*/;
+            allHighscore.addAll(db.getAllHighscores());
         } catch (Exception ex) {
             Logger.getLogger(deathController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -84,7 +84,7 @@ public class deathController implements Initializable{
         
         table.getItems().clear();
         now.addAll(db.getAllHighscores());
-        allHighscore.addAll(sorter.sort(now));
+        allHighscore.addAll(db.getAllHighscores());
         table.setItems(allHighscore);
     }
     
