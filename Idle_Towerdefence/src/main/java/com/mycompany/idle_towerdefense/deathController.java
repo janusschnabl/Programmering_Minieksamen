@@ -32,14 +32,8 @@ public class deathController implements Initializable{
     
     
     public void initialize(URL url, ResourceBundle rb){
-        name  = new TableColumn<>("name");
-        name.setCellFactory(new PropertyValueFactory<>("user"));
-        points  = new TableColumn<>("points");
-        points.setCellFactory(new PropertyValueFactory<>("score"));
-        table.getColumns().add(name);
-        table.getColumns().add(points);
-        fill();
-    }
+        ObservableList<TableData> allData = FXCollections.observableArrayList
+     }
     
     public void fill(){
         table.getItems().clear();
