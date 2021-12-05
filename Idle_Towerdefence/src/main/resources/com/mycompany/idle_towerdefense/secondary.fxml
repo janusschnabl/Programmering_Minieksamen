@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" fx:id="anchorPane" onKeyPressed="#moveSquareKeyPressed" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.idle_towerdefense.SecondaryController">
    <children>
@@ -16,6 +19,20 @@
                </color>
             </InnerShadow>
          </effect></Rectangle>
-      <Button fx:id="startButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#start" text="Start" />
+      <Button fx:id="startButton" layoutX="204.0" layoutY="264.0" mnemonicParsing="false" onAction="#start" prefHeight="72.0" prefWidth="192.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text="BEGIN" textFill="#e8e8e8">
+         <effect>
+            <DropShadow height="68.46" radius="33.724999999999994" spread="0.68" width="68.44">
+               <color>
+                  <Color red="0.5529412031173706" green="0.8588235378265381" blue="0.3764705955982208" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Ebrima" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

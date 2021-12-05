@@ -27,6 +27,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
@@ -67,6 +70,8 @@ public class SecondaryController implements Initializable {
     private AnchorPane anchorPane;
     @FXML
     private Button startButton;
+    @FXML
+    private VBox vbox;
 
     Timeline timeline;
 
@@ -74,7 +79,8 @@ public class SecondaryController implements Initializable {
 
     @FXML
     void start() {
-
+        startButton.setVisible(false);
+        
         for (Rectangle snake : snakeBody) {
             anchorPane.getChildren().remove(snake);
         }
@@ -99,6 +105,7 @@ public class SecondaryController implements Initializable {
         snakeBody.add(snakeTail_1);
 
         anchorPane.getChildren().addAll(snakeHead, snakeTail_1);
+        
     }
 
     @Override

@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #060B10;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.idle_towerdefense.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #060B10;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.idle_towerdefense.PrimaryController">
    <children>
       <Label layoutX="55.0" layoutY="164.0" prefHeight="103.0" prefWidth="505.0" text="THE SNAKE" textFill="#ecf8ff">
          <font>
@@ -135,9 +135,9 @@
       </Circle>
       <Button layoutX="212.0" layoutY="302.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="72.0" prefWidth="192.0" style="-fx-background-color: transparent; -fx-border-color: #e8e8e8; -fx-border-width: 3;" text=" " textFill="#e8e8e8">
          <effect>
-            <DropShadow height="68.47" radius="33.7275" spread="0.68" width="68.44">
+            <DropShadow height="68.46" radius="33.724999999999994" spread="0.68" width="68.44">
                <color>
-                  <Color red="0.5540014505386353" green="0.8600000143051147" blue="0.3783999979496002" />
+                  <Color red="0.5529412031173706" green="0.8588235378265381" blue="0.3764705955982208" />
                </color>
             </DropShadow>
          </effect>
