@@ -67,7 +67,7 @@ public class Database {
           //Skrive fejlhåndtering her
         }
         
-        String sql = "INSERT INTO Highscore(User, Score) VALUES('" + x.user + "', '" + x.score + "')";
+        String sql = "INSERT INTO Highscores(User, Score) VALUES('" + x.user + "', '" + x.score + "')";
  
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             //pstmt.setString(1, name);
