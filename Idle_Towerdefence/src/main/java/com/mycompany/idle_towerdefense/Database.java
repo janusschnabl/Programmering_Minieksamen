@@ -13,6 +13,7 @@ import java.sql.*;
  * @author danie
  */
 public class Database {
+    Sorting sorter = new Sorting();
     private final String connectionString = "jdbc:sqlite:src/mydatabase.sqlite";
    
    public ArrayList<Highscore> getAllHighscores() throws SQLException, Exception {
@@ -52,8 +53,8 @@ public class Database {
         }
         //Luk forbindelsen til databasen
         conn.close();
-    
-        return allHighscores;
+        return sorter.sort(allHighscores);
+        //return allHighscores;
     }
    public void saveHighscore(Highscore x) throws SQLException, Exception 
     {

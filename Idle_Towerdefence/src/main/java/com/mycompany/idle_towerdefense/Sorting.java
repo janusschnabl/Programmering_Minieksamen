@@ -12,15 +12,15 @@ import java.util.ArrayList;
  * @author danie
  */
 public class Sorting {
-    public ArrayList sort(ArrayList<Highscore> prev){
+    public ArrayList<Highscore> sort(ArrayList<Highscore> prev){
         ArrayList<Highscore> next = new ArrayList();
         next.add(prev.get(0));
-        for(int i = 1; i<prev.size();i++){
+        for(int i = 0; i<prev.size();i++){
             int m = 0;
-            while(prev.get(i).score > next.get(m).score && m<next.size()){
+            while(prev.get(i).score > next.get(m).score && m<next.size()-1){
                 m++;
             }
-            next.add(m,prev.get(i));
+            next.add(m+1,prev.get(i));
         }
         return next;
     }
