@@ -10,7 +10,7 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="600.0" stroke="#1aff00" strokeType="INSIDE" width="600.0">
          <effect>
-            <InnerShadow choke="0.12" height="65.48" radius="32.9825" width="68.45">
+            <InnerShadow height="66.97" radius="33.355000000000004" width="68.45">
                <color>
                   <Color green="1.0" blue="0.15000000596046448" />
                </color>
