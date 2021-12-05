@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.mycompany.idle_towerdefense;
-
+import java.util.*;
 import java.util.ArrayList;
 
 /**
@@ -20,8 +20,10 @@ public class Sorting {
             while(prev.get(i).score > next.get(m).score && m<next.size()-1){
                 m++;
             }
-            next.add(m+1,prev.get(i));
+            next.add(m,prev.get(i));
         }
+        Collections.reverse(next);
+        next.remove(0);
         return next;
     }
 }
