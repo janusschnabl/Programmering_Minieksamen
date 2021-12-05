@@ -30,7 +30,7 @@ public class deathController implements Initializable{
     
     static int currentScore=0;
     
-    ObservableList<Highscore> allHighscore = FXCollections.observableArrayList();
+    ObservableList<Highscore> prev = FXCollections.observableArrayList();
    
     @FXML
     TableView table;
@@ -49,6 +49,7 @@ public class deathController implements Initializable{
         Sorting sorter = new Sorting();
         try {
             allHighscore.addAll(sorter.sort(db.getAllHighscores()));
+            prev.addAll(db.getAllHighscores());
         } catch (Exception ex) {
             Logger.getLogger(deathController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -57,7 +58,7 @@ public class deathController implements Initializable{
         name.setCellValueFactory(new PropertyValueFactory<Highscore, String>("user"));
         points.setCellValueFactory(new PropertyValueFactory<Highscore, Integer>("score"));
         
-        table.setItems(allHighscore);
+        table.setItems(prev);
         
         EndScore.setText(String.valueOf(currentScore));
                 
@@ -85,6 +86,8 @@ public class deathController implements Initializable{
         now.addAll(db.getAllHighscores());
         allHighscore.addAll(sorter.sort(now));
         table.setItems(allHighscore);
+        prev.addAll(db.getAllHighscores());
+        table.setItems(prev);
     }
     
     @FXML
