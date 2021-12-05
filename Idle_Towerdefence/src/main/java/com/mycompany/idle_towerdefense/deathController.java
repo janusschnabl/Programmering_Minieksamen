@@ -8,6 +8,7 @@ package com.mycompany.idle_towerdefense;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -45,8 +46,9 @@ public class deathController implements Initializable{
     
     public void initialize(URL url, ResourceBundle rb){
         Database db = new Database();
+        Sorting sorter = new Sorting();
         try {
-            allHighscore.addAll(db.getAllHighscores());
+            allHighscore.addAll(sorter.sort(db.getAllHighscores()));
         } catch (Exception ex) {
             Logger.getLogger(deathController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -73,12 +75,15 @@ public class deathController implements Initializable{
     @FXML
     public void addName() throws Exception{
         Database db = new Database();
+        Sorting sorter = new Sorting();
+        ArrayList<Highscore> now = new ArrayList();
         Highscore.highscores.add(new Highscore(User.getText(),currentScore));
         db.saveHighscore(Highscore.highscores.get(Highscore.highscores.size()-1));
         currentScore=0;
         
         table.getItems().clear();
-        allHighscore.addAll(db.getAllHighscores());
+        now.addAll(db.getAllHighscores());
+        allHighscore.addAll(sorter.sort(now));
         table.setItems(allHighscore);
     }
     

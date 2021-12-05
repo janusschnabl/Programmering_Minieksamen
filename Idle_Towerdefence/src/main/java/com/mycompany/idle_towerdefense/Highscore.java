@@ -34,7 +34,6 @@ public class Highscore{
     }
         
     static public void sortHighscores(){
-        highscores = Sorting.sort(highscores);
     }
     static public void getHighscores(){
         try {
